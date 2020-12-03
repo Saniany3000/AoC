@@ -26,10 +26,10 @@ def get_positions(df):
         if len(word_list)>=2:
             df.set_value(i,'func_position_1', word_list[row['position_1']-1])
             df.set_value(i,'func_position_2', word_list[row['position_2']-1])
-        elif len(count_letter_postion)==1:
+        elif len(word_list)==1:
             df.set_value(i,'func_position_1', word_list[row['position_1']-1])
             df.set_value(i,'func_position_2', 'not_a_letter')
-        elif len(count_letter_postion)==0:
+        elif len(word_list)==0:
             df.set_value(i,'func_position_1', 'not_a_letter')
             df.set_value(i,'func_position_2', 'not_a_letter')
         else:
